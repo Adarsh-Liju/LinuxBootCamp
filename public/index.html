@@ -152,8 +152,8 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2022/11/02/Session_1/">
-                Introduction to Linux
+            <a href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_1/">
+                Linux Bootcamp for Beginners - Session 1
             </a>
         </h1>
         <div class="post-info">
@@ -167,7 +167,7 @@
 
     
         <div class="content">
-            <h1 id="Linux-Bootcamp-for-Beginners-Session-1"><a href="#Linux-Bootcamp-for-Beginners-Session-1" class="headerlink" title="Linux Bootcamp for Beginners - Session 1"></a>Linux Bootcamp for Beginners - Session 1</h1><h1 id="What-is-Linux"><a href="#What-is-Linux" class="headerlink" title="What is Linux?"></a>What is Linux?</h1><ul>
+            <h1 id="What-is-Linux"><a href="#What-is-Linux" class="headerlink" title="What is Linux?"></a>What is Linux?</h1><ul>
 <li><strong>Linux</strong> is a family of open source operating systems (OS) which is modelled based on UNIX.</li>
 <li>It was created by <strong>Linus Trovalds</strong> , first released on <strong>September 17,1991</strong>.</li>
 <li>Linux is typically packaged in a Linux Distribution (aka Distro) like <strong>Ubuntu, Fedora , Arch Linux etc</strong></li>
@@ -197,8 +197,182 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2022/11/02/Session_3/">
-                FOSS and System Processes
+            <a href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_2/">
+                Linux Bootcamp for Beginners - Session 2
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2022-11-02</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="Linus-Torvalds"><a href="#Linus-Torvalds" class="headerlink" title="Linus Torvalds"></a>Linus Torvalds</h1><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg" alt="Linus Torvalds"></p>
+<h1 id="Storage-Structure-of-Linux"><a href="#Storage-Structure-of-Linux" class="headerlink" title="Storage Structure of Linux"></a>Storage Structure of Linux</h1><p><img src="https://paper-attachments.dropbox.com/s_C3F2B19DDBDA0B884AC8A93FEFEB05F933EDFD5E6DDAC52F8195936FA757710F_1654032263623_mermaid-diagram-20220601025416.png"></p>
+<ul>
+<li>In Linux, the file system creates a tree structure. All the files are arranged as a tree and its branches. </li>
+<li>The topmost directory called the <strong>root (&#x2F;) directory</strong>. All other directories in Linux can be accessed from the root directory.</li>
+<li>Some Features in Linux include :- <ul>
+<li><strong>Specifying paths:</strong> Linux does not use the backslash () to separate the components; it uses forward slash (&#x2F;) as an alternative. </li>
+<li><strong>Partition, Directories, and Drives:</strong> Linux does not use drive letters to organize the drive as Windows does. In Linux, we cannot tell whether we are addressing a partition, a network device, or an “ordinary” directory and a Drive.</li>
+<li><strong>Case Sensitivity:</strong> Linux file system is case sensitive. It distinguishes between lowercase and uppercase file names. This is also followed in <strong>Linux commands</strong> </li>
+<li><strong>File Extensions:</strong> In Linux, a file may have the extension ‘.txt,’ but it is not necessary that a file should have a file extension. If we use the graphical file manager, it symbolizes the files and folders.</li>
+<li><strong>Hidden files:</strong> Linux distinguishes between standard files and hidden files, mostly the configuration files are hidden in Linux OS. Usually, we don’t need to access or read the hidden files. The hidden files in Linux are represented by a dot (.) before the file name (e.g., .ignore). To access the files, we need to change the view in the file manager or need to use a specific command in the shell.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Linux-File-Permissions"><a href="#Linux-File-Permissions" class="headerlink" title="Linux File Permissions"></a>Linux File Permissions</h1><p>The basic Linux permissions model works by associating each system file with an owner and a group and assigning permission access rights for three different classes of users:</p>
+<h2 id="Permission-Groups"><a href="#Permission-Groups" class="headerlink" title="Permission Groups"></a><strong>Permission Groups</strong></h2><pre><code>- **owner** – The Owner permissions apply only to the owner of the file or directory, they will not impact the actions of other users.
+- **group** – The Group permissions apply only to the group that has been assigned to the file or directory, they will not affect the actions of other users.
+- **all users** – The All Users permissions apply to all other users on the system, this is the permission group that you want to watch the most.
+</code></pre>
+<p><strong>Permission Types</strong><br>Three file permissions types apply to each class of users:</p>
+<ul>
+<li>The <code>read</code> permission.</li>
+<li>The <code>write</code> permission.</li>
+<li>The <code>execute</code> permission.<table>
+<thead>
+<tr>
+<th>permission</th>
+<th>on a file</th>
+<th>on a directory</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r (read)</td>
+<td>read file content (cat)</td>
+<td>read directory content (ls)</td>
+</tr>
+<tr>
+<td>w (write)</td>
+<td>change file content (vi)</td>
+<td>create file in directory (touch)</td>
+</tr>
+<tr>
+<td>x (execute)</td>
+<td>execute the file</td>
+<td>enter the directory (cd)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h1 id="Basic-I-x2F-O"><a href="#Basic-I-x2F-O" class="headerlink" title="Basic I&#x2F;O"></a>Basic I&#x2F;O</h1><pre><code>echo &quot;Hello Everyone&quot;
+</code></pre>
+<h1 id="Linux-Terminal"><a href="#Linux-Terminal" class="headerlink" title="Linux Terminal"></a>Linux Terminal</h1><ul>
+<li>The Linux terminal is a text-based interface used to control a Linux computer.</li>
+<li>It’s just one of the many tools provided to Linux users for accomplishing any given task, but it’s widely considered the most efficient method available.</li>
+<li>It’s so popular, in fact, that Apple changed its foundation to Unix and has gained the <code>bash</code> and <code>zsh</code></li>
+<li>Microsoft developed PowerShell, its very own open source command line similiar to Linux Terminals</li>
+</ul>
+<h1 id="Linux-Commands"><a href="#Linux-Commands" class="headerlink" title="Linux Commands"></a>Linux Commands</h1><ul>
+<li>A <strong>command</strong> is a special keyword you can use in a terminal to tell your computer to perform an action.</li>
+<li>Most commands are tiny little applications that get installed with the rest of your operating system ( Even applications like <code>cat</code>, <code>ls</code> , <code>curl</code> )</li>
+</ul>
+<h2 id="Arguments-in-Linux-Commands"><a href="#Arguments-in-Linux-Commands" class="headerlink" title="Arguments in Linux Commands"></a>Arguments in Linux Commands</h2><ul>
+<li>An <strong>argument</strong> is any part of a command that isn’t the command</li>
+<li>It directs the command to do a particular task</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code>ls Documents
+</code></pre>
+<h2 id="Options-in-Linux-Commands"><a href="#Options-in-Linux-Commands" class="headerlink" title="Options in Linux Commands"></a>Options in Linux Commands</h2><ul>
+<li>Command <strong>options</strong>, also called <strong>flags</strong> or <strong>switches</strong>, are part of command arguments. </li>
+<li>A command argument is anything that follows a command, and an option is usually (but not always) demarcated by a dash or double dashes.</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code>python3 --version
+</code></pre>
+<h1 id="Pipelining-in-Linux"><a href="#Pipelining-in-Linux" class="headerlink" title="Pipelining in Linux"></a>Pipelining in Linux</h1><ul>
+<li>A <code>pipeline</code> is a sequence of one or more commands separated by one of the control operators ‘|’ or ‘|&amp;’.</li>
+<li>The output of each command in the pipeline is connected via a pipe to the input of the next command. That is, each command reads the previous command’s output.</li>
+<li><code>grep</code> is used to search for patterns or particular word in a list.</li>
+</ul>
+<p><code>grep</code> </p>
+<pre><code>cat &lt;file&gt; | grep &lt;something&gt;
+</code></pre>
+<p><strong>Example</strong></p>
+<pre><code>ls -l | grep sample
+</code></pre>
+<p><img src="https://paper-attachments.dropbox.com/s_C3F2B19DDBDA0B884AC8A93FEFEB05F933EDFD5E6DDAC52F8195936FA757710F_1654029159937_mermaid-diagram-20220601002450.png"></p>
+<h1 id="Redirections-in-Terminal"><a href="#Redirections-in-Terminal" class="headerlink" title="Redirections in Terminal"></a>Redirections in Terminal</h1><ul>
+<li><strong>Input&#x2F;Output (I&#x2F;O) redirection</strong> in Linux refers to the ability of the Linux operating system that allows us to change the standard input (<code>stdin</code>) and standard output (<code>stdout</code>) when executing a command on the terminal.</li>
+<li>By default, the standard input device is your keyboard and the standard output device is your screen.</li>
+</ul>
+<p><strong>Types of Redirection</strong> </p>
+<p><strong>1. Overwrite</strong><br>It completely overwrites with new data. Any old data present will be lost.</p>
+<ul>
+<li><code>&gt;</code> standard output</li>
+<li><code>&lt;</code> standard input</li>
+</ul>
+<p><strong>2. Appends</strong>  </p>
+<p>It appends to the existing&#x2F;old data. Any old data present will not be lost.</p>
+<ul>
+<li><code>&gt;&gt;</code> standard output</li>
+<li><code>&lt;&lt;</code> standard input</li>
+</ul>
+<p><strong>Error Redirection:</strong> Error redirection is transferring the errors generated by some false commands to a file rather than STDOUT.</p>
+<pre><code>gcc 2&gt;error.txt
+
+
+cat error.txt
+gcc: fatal error: no input files
+compilation terminated.
+</code></pre>
+<h1 id="Linux-Shell"><a href="#Linux-Shell" class="headerlink" title="Linux Shell"></a>Linux Shell</h1><ul>
+<li>The shell is the <strong>Linux command line interpreter</strong>. It provides an interface between the user and the kernel and executes programs called commands.</li>
+<li>Shell is an environment in which we can run our programs, and shell scripts.</li>
+</ul>
+<h2 id="Types-of-shell"><a href="#Types-of-shell" class="headerlink" title="Types of shell"></a>Types of shell</h2><ul>
+<li>Friendly Interactive Shell - <code>fish</code></li>
+<li>POSIX shell - <code>sh</code></li>
+<li>Bourne Again shell - <code>bash</code></li>
+<li>Z Shell <code>zsh</code></li>
+</ul>
+<p>By Default Ubuntu has <code>bash</code> pre-installed</p>
+<h2 id="Shell-Scripting"><a href="#Shell-Scripting" class="headerlink" title="Shell Scripting"></a>Shell Scripting</h2><ul>
+<li><p>A shell script is a computer program designed to be run by the Unix shell(here bash), a command-line interpreter. </p>
+</li>
+<li><p>Every shell script starts with a shebang construct to alert the system that a shell script has been started. For example :</p>
+<p>  #!&#x2F;bin&#x2F;sh</p>
+</li>
+</ul>
+<p><strong>Comments</strong> </p>
+<ul>
+<li>Single Line comments - <code>#</code></li>
+<li>Multi Line comments - <code>: &#39;</code> to open and <code>&#39;</code> to close.</li>
+</ul>
+<p><strong>Example</strong> </p>
+<pre><code>#!/bin/bash
+
+# Author : Adarsh Liju Abraham
+</code></pre>
+<ul>
+<li><code>echo</code> is used to print any string to <code>stdout</code></li>
+<li><code>read</code> is used to accept data from <code>stdin</code></li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code>#!/bin/bash
+
+# Author : Adarsh Liju Abraham
+</code></pre>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_3/">
+                Linux Bootcamp for Beginners - Session 3
             </a>
         </h1>
         <div class="post-info">
@@ -386,180 +560,6 @@ kill -SIGKILL 1234
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2022/11/02/Session_2/">
-                Storage , File Systems , File Permissions and POSIX Basics
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2022-11-02</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h1 id="Linus-Torvalds"><a href="#Linus-Torvalds" class="headerlink" title="Linus Torvalds"></a>Linus Torvalds</h1><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg" alt="Linus Torvalds"></p>
-<h1 id="Storage-Structure-of-Linux"><a href="#Storage-Structure-of-Linux" class="headerlink" title="Storage Structure of Linux"></a>Storage Structure of Linux</h1><p><img src="https://paper-attachments.dropbox.com/s_C3F2B19DDBDA0B884AC8A93FEFEB05F933EDFD5E6DDAC52F8195936FA757710F_1654032263623_mermaid-diagram-20220601025416.png"></p>
-<ul>
-<li>In Linux, the file system creates a tree structure. All the files are arranged as a tree and its branches. </li>
-<li>The topmost directory called the <strong>root (&#x2F;) directory</strong>. All other directories in Linux can be accessed from the root directory.</li>
-<li>Some Features in Linux include :- <ul>
-<li><strong>Specifying paths:</strong> Linux does not use the backslash () to separate the components; it uses forward slash (&#x2F;) as an alternative. </li>
-<li><strong>Partition, Directories, and Drives:</strong> Linux does not use drive letters to organize the drive as Windows does. In Linux, we cannot tell whether we are addressing a partition, a network device, or an “ordinary” directory and a Drive.</li>
-<li><strong>Case Sensitivity:</strong> Linux file system is case sensitive. It distinguishes between lowercase and uppercase file names. This is also followed in <strong>Linux commands</strong> </li>
-<li><strong>File Extensions:</strong> In Linux, a file may have the extension ‘.txt,’ but it is not necessary that a file should have a file extension. If we use the graphical file manager, it symbolizes the files and folders.</li>
-<li><strong>Hidden files:</strong> Linux distinguishes between standard files and hidden files, mostly the configuration files are hidden in Linux OS. Usually, we don’t need to access or read the hidden files. The hidden files in Linux are represented by a dot (.) before the file name (e.g., .ignore). To access the files, we need to change the view in the file manager or need to use a specific command in the shell.</li>
-</ul>
-</li>
-</ul>
-<h1 id="Linux-File-Permissions"><a href="#Linux-File-Permissions" class="headerlink" title="Linux File Permissions"></a>Linux File Permissions</h1><p>The basic Linux permissions model works by associating each system file with an owner and a group and assigning permission access rights for three different classes of users:</p>
-<h2 id="Permission-Groups"><a href="#Permission-Groups" class="headerlink" title="Permission Groups"></a><strong>Permission Groups</strong></h2><pre><code>- **owner** – The Owner permissions apply only to the owner of the file or directory, they will not impact the actions of other users.
-- **group** – The Group permissions apply only to the group that has been assigned to the file or directory, they will not affect the actions of other users.
-- **all users** – The All Users permissions apply to all other users on the system, this is the permission group that you want to watch the most.
-</code></pre>
-<p><strong>Permission Types</strong><br>Three file permissions types apply to each class of users:</p>
-<ul>
-<li>The <code>read</code> permission.</li>
-<li>The <code>write</code> permission.</li>
-<li>The <code>execute</code> permission.<table>
-<thead>
-<tr>
-<th>permission</th>
-<th>on a file</th>
-<th>on a directory</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>r (read)</td>
-<td>read file content (cat)</td>
-<td>read directory content (ls)</td>
-</tr>
-<tr>
-<td>w (write)</td>
-<td>change file content (vi)</td>
-<td>create file in directory (touch)</td>
-</tr>
-<tr>
-<td>x (execute)</td>
-<td>execute the file</td>
-<td>enter the directory (cd)</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h1 id="Basic-I-x2F-O"><a href="#Basic-I-x2F-O" class="headerlink" title="Basic I&#x2F;O"></a>Basic I&#x2F;O</h1><pre><code>echo &quot;Hello Everyone&quot;
-</code></pre>
-<h1 id="Linux-Terminal"><a href="#Linux-Terminal" class="headerlink" title="Linux Terminal"></a>Linux Terminal</h1><ul>
-<li>The Linux terminal is a text-based interface used to control a Linux computer.</li>
-<li>It’s just one of the many tools provided to Linux users for accomplishing any given task, but it’s widely considered the most efficient method available.</li>
-<li>It’s so popular, in fact, that Apple changed its foundation to Unix and has gained the <code>bash</code> and <code>zsh</code></li>
-<li>Microsoft developed PowerShell, its very own open source command line similiar to Linux Terminals</li>
-</ul>
-<h1 id="Linux-Commands"><a href="#Linux-Commands" class="headerlink" title="Linux Commands"></a>Linux Commands</h1><ul>
-<li>A <strong>command</strong> is a special keyword you can use in a terminal to tell your computer to perform an action.</li>
-<li>Most commands are tiny little applications that get installed with the rest of your operating system ( Even applications like <code>cat</code>, <code>ls</code> , <code>curl</code> )</li>
-</ul>
-<h2 id="Arguments-in-Linux-Commands"><a href="#Arguments-in-Linux-Commands" class="headerlink" title="Arguments in Linux Commands"></a>Arguments in Linux Commands</h2><ul>
-<li>An <strong>argument</strong> is any part of a command that isn’t the command</li>
-<li>It directs the command to do a particular task</li>
-</ul>
-<p><strong>Example</strong></p>
-<pre><code>ls Documents
-</code></pre>
-<h2 id="Options-in-Linux-Commands"><a href="#Options-in-Linux-Commands" class="headerlink" title="Options in Linux Commands"></a>Options in Linux Commands</h2><ul>
-<li>Command <strong>options</strong>, also called <strong>flags</strong> or <strong>switches</strong>, are part of command arguments. </li>
-<li>A command argument is anything that follows a command, and an option is usually (but not always) demarcated by a dash or double dashes.</li>
-</ul>
-<p><strong>Example</strong></p>
-<pre><code>python3 --version
-</code></pre>
-<h1 id="Pipelining-in-Linux"><a href="#Pipelining-in-Linux" class="headerlink" title="Pipelining in Linux"></a>Pipelining in Linux</h1><ul>
-<li>A <code>pipeline</code> is a sequence of one or more commands separated by one of the control operators ‘|’ or ‘|&amp;’.</li>
-<li>The output of each command in the pipeline is connected via a pipe to the input of the next command. That is, each command reads the previous command’s output.</li>
-<li><code>grep</code> is used to search for patterns or particular word in a list.</li>
-</ul>
-<p><code>grep</code> </p>
-<pre><code>cat &lt;file&gt; | grep &lt;something&gt;
-</code></pre>
-<p><strong>Example</strong></p>
-<pre><code>ls -l | grep sample
-</code></pre>
-<p><img src="https://paper-attachments.dropbox.com/s_C3F2B19DDBDA0B884AC8A93FEFEB05F933EDFD5E6DDAC52F8195936FA757710F_1654029159937_mermaid-diagram-20220601002450.png"></p>
-<h1 id="Redirections-in-Terminal"><a href="#Redirections-in-Terminal" class="headerlink" title="Redirections in Terminal"></a>Redirections in Terminal</h1><ul>
-<li><strong>Input&#x2F;Output (I&#x2F;O) redirection</strong> in Linux refers to the ability of the Linux operating system that allows us to change the standard input (<code>stdin</code>) and standard output (<code>stdout</code>) when executing a command on the terminal.</li>
-<li>By default, the standard input device is your keyboard and the standard output device is your screen.</li>
-</ul>
-<p><strong>Types of Redirection</strong> </p>
-<p><strong>1. Overwrite</strong><br>It completely overwrites with new data. Any old data present will be lost.</p>
-<ul>
-<li><code>&gt;</code> standard output</li>
-<li><code>&lt;</code> standard input</li>
-</ul>
-<p><strong>2. Appends</strong>  </p>
-<p>It appends to the existing&#x2F;old data. Any old data present will not be lost.</p>
-<ul>
-<li><code>&gt;&gt;</code> standard output</li>
-<li><code>&lt;&lt;</code> standard input</li>
-</ul>
-<p><strong>Error Redirection:</strong> Error redirection is transferring the errors generated by some false commands to a file rather than STDOUT.</p>
-<pre><code>gcc 2&gt;error.txt
-
-
-cat error.txt
-gcc: fatal error: no input files
-compilation terminated.
-</code></pre>
-<h1 id="Linux-Shell"><a href="#Linux-Shell" class="headerlink" title="Linux Shell"></a>Linux Shell</h1><ul>
-<li>The shell is the <strong>Linux command line interpreter</strong>. It provides an interface between the user and the kernel and executes programs called commands.</li>
-<li>Shell is an environment in which we can run our programs, and shell scripts.</li>
-</ul>
-<h2 id="Types-of-shell"><a href="#Types-of-shell" class="headerlink" title="Types of shell"></a>Types of shell</h2><ul>
-<li>Friendly Interactive Shell - <code>fish</code></li>
-<li>POSIX shell - <code>sh</code></li>
-<li>Bourne Again shell - <code>bash</code></li>
-<li>Z Shell <code>zsh</code></li>
-</ul>
-<p>By Default Ubuntu has <code>bash</code> pre-installed</p>
-<h2 id="Shell-Scripting"><a href="#Shell-Scripting" class="headerlink" title="Shell Scripting"></a>Shell Scripting</h2><ul>
-<li><p>A shell script is a computer program designed to be run by the Unix shell(here bash), a command-line interpreter. </p>
-</li>
-<li><p>Every shell script starts with a shebang construct to alert the system that a shell script has been started. For example :</p>
-<p>  #!&#x2F;bin&#x2F;sh</p>
-</li>
-</ul>
-<p><strong>Comments</strong> </p>
-<ul>
-<li>Single Line comments - <code>#</code></li>
-<li>Multi Line comments - <code>: &#39;</code> to open and <code>&#39;</code> to close.</li>
-</ul>
-<p><strong>Example</strong> </p>
-<pre><code>#!/bin/bash
-
-# Author : Adarsh Liju Abraham
-</code></pre>
-<ul>
-<li><code>echo</code> is used to print any string to <code>stdout</code></li>
-<li><code>read</code> is used to accept data from <code>stdin</code></li>
-</ul>
-<p><strong>Example</strong></p>
-<pre><code>#!/bin/bash
-
-# Author : Adarsh Liju Abraham
-</code></pre>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -589,15 +589,15 @@ compilation terminated.
         <ul>
             
             <li>
-                <a class="footer-post" href="/2022/11/02/Session_3/">FOSS and System Processes</a>
+                <a class="footer-post" href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_3/">Linux Bootcamp for Beginn</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2022/11/02/Session_2/">Storage , File Systems , </a>
+                <a class="footer-post" href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_2/">Linux Bootcamp for Beginn</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2022/11/02/Session_1/">Introduction to Linux</a>
+                <a class="footer-post" href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_1/">Linux Bootcamp for Beginn</a>
             </li>
             
         </ul>
