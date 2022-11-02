@@ -64,6 +64,7 @@ echo "Hello Everyone"
 - It directs the command to do a particular task
 
 **Example**
+
 ```
     ls Documents
 ```
