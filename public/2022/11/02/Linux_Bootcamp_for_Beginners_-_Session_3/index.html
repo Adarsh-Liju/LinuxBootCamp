@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Table of Contents#
+
+
+
+
+FOSS
+“Free and Open Source Software”
+
+
+GNU - GNU’s Not Unix
+FOSS vs Proprietary software?
+Process
+Types of process
+Parent Proce">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Adarsh Liju Abraham">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux Bootcamp for Beginners - Session 3"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Adarsh Liju Abraham"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>Linux Bootcamp for Beginners - Session 3 - Adarsh Liju Abraham</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_3/">
+                Linux Bootcamp for Beginners - Session 3
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2022-11-02</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2><span id="table-of-contents">Table of Contents</span><a href="#table-of-contents" class="header-anchor">#</a></h2><div class="toc">
+
+<!-- toc -->
+
+<ul>
+<li><a href="#foss">FOSS</a><ul>
+<li><a href="#free-and-open-source-software">“Free and Open Source Software”</a></li>
+</ul>
+</li>
+<li><a href="#gnu-gnu-s-not-unix">GNU - GNU’s Not Unix</a></li>
+<li><a href="#foss-vs-proprietary-software">FOSS vs Proprietary software?</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#types-of-process">Types of process</a></li>
+<li><a href="#parent-process">Parent Process</a></li>
+<li><a href="#child-process">Child Process</a></li>
+<li><a href="#zombie-process">Zombie Process</a></li>
+<li><a href="#orphan-process">Orphan Process</a></li>
+<li><a href="#daemon-process">Daemon Process</a></li>
+<li><a href="#ps">ps</a></li>
+<li><a href="#kill">kill</a><ul>
+<li><a href="#usage">Usage</a></li>
+</ul>
+</li>
+<li><a href="#top"><code>top</code></a></li>
+</ul>
+<!-- tocstop -->
+
+</div> 
+
+<h1><span id="foss">FOSS</span><a href="#foss" class="header-anchor">#</a></h1><p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654201183185_371px-Richard_Stallman_at_LibrePlanet_2019.jpg" alt="Richard Stallman"></p>
+<h2><span id="free-and-open-source-software">“Free and Open Source Software”</span><a href="#free-and-open-source-software" class="header-anchor">#</a></h2><ul>
+<li>The freedom to run the program as you wish, for any purpose .</li>
+<li>The freedom to study how the program works, and change it so it does your computing as you wish . </li>
+<li>The freedom to redistribute copies so you can help others.</li>
+<li>The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this</li>
+</ul>
+<h1><span id="gnu-gnu-s-not-unix">GNU - GNU’s Not Unix</span><a href="#gnu-gnu-s-not-unix" class="header-anchor">#</a></h1><p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654201894183_file.png"></p>
+<h1><span id="foss-vs-proprietary-software">FOSS vs Proprietary software?</span><a href="#foss-vs-proprietary-software" class="header-anchor">#</a></h1><p>Propreitery soft.</p>
+<ul>
+<li>Costly</li>
+<li>Under control of the org</li>
+<li>ppl cant contribute</li>
+</ul>
+<h1><span id="process">Process</span><a href="#process" class="header-anchor">#</a></h1><p>A program&#x2F;command when executed, a special instance is provided by the system to the process. This instance consists of all the services&#x2F;resources that may be utilized by the process under execution. </p>
+<ul>
+<li>Whenever a command is issued in Unix&#x2F;Linux, it creates&#x2F;starts a new process. For example, pwd when issued which is used to list the current directory location the user is in, a process starts.</li>
+<li>Through a 5 digit ID number Unix&#x2F;Linux keeps an account of the processes, this number is call process ID or PID. Each process in the system has a unique PID.</li>
+<li>Used up pid’s can be used in again for a newer process since all the possible combinations are used.</li>
+<li>At any point of time, no two processes with the same pid exist in the system because it is the pid that Unix uses to track each process.</li>
+</ul>
+<p><strong>Foreground Process :</strong> Every process when started runs in foreground by default, receives input from the keyboard, and sends output to the screen.  </p>
+<p><strong>Background Process:</strong> It runs in the background without keyboard input and waits till keyboard input is required. Thus, other processes can be done in parallel with the process running in the background since they do not have to wait for the previous process to be completed. </p>
+<h1><span id="types-of-process">Types of process</span><a href="#types-of-process" class="header-anchor">#</a></h1><h1><span id="parent-process">Parent Process</span><a href="#parent-process" class="header-anchor">#</a></h1><p>All the processes in operating system are created when a process executes the fork() system call except the startup process. The process that used the fork() system call is the parent process. In other words, a parent process is one that creates a child process. A parent process may have multiple child processes but a child process only one parent process.<br>On the success of a fork() system call, the PID of the child process is returned to the parent process and 0 is returned to the child process. On the failure of a fork() system call, -1 is returned to the parent process and a child process is not created.</p>
+<h1><span id="child-process">Child Process</span><a href="#child-process" class="header-anchor">#</a></h1><p>A child process is a process created by a parent process in operating system using a fork() system call. A child process may also be called a subprocess or a subtask.<br>A child process is created as its parent process’s copy and inherits most of its attributes. If a child process has no parent process, it was created directly by the kernel.<br>If a child process exits or is interrupted, then a SIGCHLD signal is send to the parent process.<br>A diagram that demonstrates parent and child process is given as follows −</p>
+<p><img src="http://www.it.uu.se/education/course/homepage/os/vt18/images/module-2/fork-wait-exit.png" alt="How parent-child process works"></p>
+<h1><span id="zombie-process">Zombie Process</span><a href="#zombie-process" class="header-anchor">#</a></h1><p>A zombie process is a process whose execution is completed but it still has an entry in the process table. Zombie processes usually occur for child processes, as the parent process still needs to read its child’s exit status. Once this is done using the wait system call, the zombie process is eliminated from the process table. This is known as reaping the zombie process.</p>
+<p><img src="https://www.tutorialspoint.com/assets/questions/media/12233/Zombie%20Process%20in%20LInux.png" alt="Zombie Process"></p>
+<ul>
+<li>All the memory and resources allocated to a process are deallocated when the process terminates using the <code>exit()</code> system call. But the process’s entry in the process table is still available. This process is now a zombie process.</li>
+<li>The exit status of the zombie process zombie process can be read by the parent process using the <code>wait()</code> system call. After that, the zombie process is removed from the system. Then the process ID and the process table entry of the zombie process can be reused.</li>
+<li>If the parent process does not use the <code>wait()</code> system call, the zombie process is left in the process table. This creates a resource leak.</li>
+<li>If the parent process is not running anymore, then the presence of a zombie process indicates an operating system bug. This may not be a serious problem if there are a few zombie processes but under heavier loads, this can create issues for the system such as running out of process table entries.</li>
+<li>The zombie processes can be removed from the system by sending the <code>SIGCHLD</code> signal to the parent, using the kill command. If the zombie process is still not eliminated from the process table by the parent process, then the parent process is terminated if that is acceptable.</li>
+</ul>
+<p>We can see zombie processes if we type <code>ps -aux</code>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>STAT</strong></th>
+<th><strong>Process State</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>D</strong></td>
+<td>uninterruptible sleep (usually IO)</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>running or runnable (on run queue)</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>interruptible sleep (waiting for an event to complete)</td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>stopped, either by a job control signal or because it is being traced</td>
+</tr>
+<tr>
+<td><strong>X</strong></td>
+<td>dead (should never be seen)</td>
+</tr>
+<tr>
+<td><strong>Z</strong></td>
+<td>defunct (“zombie”) process, terminated but not reaped by its parent</td>
+</tr>
+<tr>
+<td><strong>&lt;</strong></td>
+<td>high-priority (not nice to other users)</td>
+</tr>
+<tr>
+<td><strong>N</strong></td>
+<td>low-priority (nice to other users)</td>
+</tr>
+<tr>
+<td><strong>L</strong></td>
+<td>has pages locked into memory (for real-time and custom IO)</td>
+</tr>
+<tr>
+<td><strong>s</strong></td>
+<td>is a session leader</td>
+</tr>
+<tr>
+<td><strong>l</strong></td>
+<td>is multi-threaded (using CLONE_THREAD, like NPTL pthreads do)</td>
+</tr>
+<tr>
+<td><strong>+</strong></td>
+<td>is in the foreground process group</td>
+</tr>
+</tbody></table>
+<h1><span id="orphan-process">Orphan Process</span><a href="#orphan-process" class="header-anchor">#</a></h1><ul>
+<li>Orphan processes are those processes that are still running even though their parent process has terminated or finished. A process can be orphaned intentionally or unintentionally.</li>
+<li>An intentionally orphaned process runs in the background without any manual support. This is usually done to start an indefinitely running service or to complete a long-running job without user attention.</li>
+<li>An unintentionally orphaned process is created when its parent process crashes or terminates. Unintentional orphan processes can be avoided using the process group mechanism.</li>
+</ul>
+<h1><span id="daemon-process">Daemon Process</span><a href="#daemon-process" class="header-anchor">#</a></h1><p>A daemon process is a background process that is not under the direct control of the user. This process is usually started when the system is started and is terminated with the system shut down.<br>Usually the parent process of the daemon process is the init process. This is because the init process usually adopts the daemon process after the parent process forks the daemon process and terminates.<br>The daemon process names normally end with a d. Some of the examples of daemon processes in Unix are −</p>
+<ul>
+<li><strong>crond</strong></li>
+<li>This is a job scheduler that runs jobs in the background.</li>
+<li><strong>syslogd</strong></li>
+<li>This is the system logger that implements the system logging facility and collects system messages.</li>
+<li><strong>httpd</strong></li>
+<li>This is the web server daemon process that handles the Hypertext Transfer Protocol.</li>
+<li><strong>dhcpd</strong></li>
+<li>This daemon configures the TCP&#x2F;IP information for users dynamically.</li>
+</ul>
+<h1><span id="ps">ps</span><a href="#ps" class="header-anchor">#</a></h1><p>ps (Process status) can be used to see&#x2F;list all the running processes. </p>
+<p>Normal Use:</p>
+<pre><code>ps
+</code></pre>
+<p>For More Info</p>
+<pre><code>ps -f
+</code></pre>
+<p>For a particular process ID</p>
+<pre><code>ps &lt;process id&gt;
+</code></pre>
+<p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654185800241_image.png"></p>
+<p><strong>Fields described by ps are described as:</strong> </p>
+<ul>
+<li><strong>UID</strong>: User ID that this process belongs to (the person running it)</li>
+<li><strong>PID</strong>: Process ID</li>
+<li><strong>PPID</strong>: Parent process ID (the ID of the process that started it)</li>
+<li><strong>C</strong>: CPU utilization of process</li>
+<li><strong>STIME</strong>: Process start time</li>
+<li><strong>TTY</strong>: Terminal type associated with the process</li>
+<li><strong>TIME</strong>: CPU time is taken by the process</li>
+<li><strong>CMD</strong>: The command that started this process</li>
+</ul>
+<h1><span id="kill">kill</span><a href="#kill" class="header-anchor">#</a></h1><ul>
+<li><code>kill</code> command in Linux, is a built-in command which is used to terminate processes manually.</li>
+<li>It helps in unwanted congestion or saturation of tasks.</li>
+</ul>
+<p><strong>Basic Syntax</strong></p>
+<pre><code>kill &lt;signal&gt; &lt;process id&gt;
+</code></pre>
+<p><code>**kill -l**</code> **:**To display all the available signals</p>
+<p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654186317333_image.png"></p>
+<h2><span id="usage">Usage</span><a href="#usage" class="header-anchor">#</a></h2><pre><code>kill -5 1234
+kill -SIGKILL 1234
+</code></pre>
+<h1><span id="top"><code>top</code></span><a href="#top" class="header-anchor">#</a></h1><ul>
+<li>Displays all tasks presently running.</li>
+<li>It has a CLI for killing, sorting and suspending tasks</li>
+<li><code>htop</code> is an improved version of this software.</li>
+</ul>
+<p><strong>Usage</strong></p>
+<pre><code>top
+</code></pre>
+<p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654202140380_image.png"></p>
+<pre><code>htop
+</code></pre>
+<p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654202325247_image.png"></p>
+<p><code>**bashtop**</code></p>
+<ul>
+<li>bashtop is a resource monitor that shows usage and stats for processor,memory, disks, network and processes.<ul>
+<li>Easy to use, with a game inspired menu system.</li>
+<li>Function for showing detailed stats for selected process.</li>
+<li>Ability to filter processes.</li>
+<li>Easy switching between sorting options.</li>
+<li>Send SIGTERM, SIGKILL, SIGINT to selected process.</li>
+<li>UI menu for changing all config file options.</li>
+<li>Auto scaling graph for network usage.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654706380412_image.png"></p>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a target="_blank" rel="noopener" href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_3/">Linux Bootcamp for Beginn</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_2/">Linux Bootcamp for Beginn</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2022/11/02/Linux_Bootcamp_for_Beginners_-_Session_1/">Linux Bootcamp for Beginn</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://telegram.org/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-telegram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
