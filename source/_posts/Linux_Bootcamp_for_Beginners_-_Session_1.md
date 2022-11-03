@@ -2,6 +2,8 @@
 title: Linux Bootcamp for Beginners - Session 1
 ---
 
+\toc
+
 # What is Linux?
 - **Linux** is a family of open source operating systems (OS) which is modelled based on UNIX.
 - It was created by **Linus Trovalds** , first released on **September 17,1991**.

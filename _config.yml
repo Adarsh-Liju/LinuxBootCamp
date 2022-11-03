@@ -65,6 +65,17 @@ index_generator:
   per_page: 10
   order_by: +date
 
+toc:
+  maxdepth: 3
+  class: toc
+  slugify: transliteration
+  decodeEntities: false
+  anchor:
+    position: after
+    symbol: '#'
+    style: header-anchor
+
+    
 # Category & Tag
 default_category: uncategorized
 category_map:
