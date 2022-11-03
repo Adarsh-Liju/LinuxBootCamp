@@ -2,7 +2,8 @@
 title: Linux Bootcamp for Beginners - Session 1
 ---
 
-\toc
+## Table of Contents
+<!-- toc --> 
 
 # What is Linux?
 - **Linux** is a family of open source operating systems (OS) which is modelled based on UNIX.

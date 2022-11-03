@@ -1,6 +1,10 @@
 ---
 title: Linux Bootcamp for Beginners - Session 3
 ---
+
+## Table of Contents
+<!-- toc --> 
+
 # FOSS
 ![Richard Stallman](https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654201183185_371px-Richard_Stallman_at_LibrePlanet_2019.jpg)
 
