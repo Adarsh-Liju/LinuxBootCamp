@@ -317,14 +317,12 @@ Parent Process
 </ul>
 <h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>ps (Process status) can be used to see&#x2F;list all the running processes. </p>
 <p>Normal Use:</p>
-<pre><code>ps
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps</span><br></pre></td></tr></table></figure>
 <p>For More Info</p>
-<pre><code>ps -f
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -f</span><br></pre></td></tr></table></figure>
 <p>For a particular process ID</p>
-<pre><code>ps &lt;process id&gt;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps &lt;process <span class="built_in">id</span>&gt;</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654185800241_image.png"></p>
 <p><strong>Fields described by ps are described as:</strong> </p>
 <ul>
@@ -342,13 +340,12 @@ Parent Process
 <li>It helps in unwanted congestion or saturation of tasks.</li>
 </ul>
 <p><strong>Basic Syntax</strong></p>
-<pre><code>kill &lt;signal&gt; &lt;process id&gt;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> &lt;signal&gt; &lt;process <span class="built_in">id</span>&gt;</span><br></pre></td></tr></table></figure>
+
 <p><code>**kill -l**</code> **:**To display all the available signals</p>
 <p><img src="https://paper-attachments.dropbox.com/s_7F2492607B71714A428607E3287D6493F19F9B88906C055C4E199BFBDF802B26_1654186317333_image.png"></p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><pre><code>kill -5 1234
-kill -SIGKILL 1234
-</code></pre>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -5 1234</span><br><span class="line"><span class="built_in">kill</span> -SIGKILL 1234</span><br></pre></td></tr></table></figure>
+
 <h1 id="top"><a href="#top" class="headerlink" title="top"></a><code>top</code></h1><ul>
 <li>Displays all tasks presently running.</li>
 <li>It has a CLI for killing, sorting and suspending tasks</li>
