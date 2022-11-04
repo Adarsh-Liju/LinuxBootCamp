@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron:500");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=JetBrains Mono");
 body {
     background: #0f1516;
@@ -8,7 +7,7 @@ body {
 
 @media (max-width: 33.9em) {
     body {
-        font-size: 22px;
+        font-size: 0.8em;
     }
 }
 
